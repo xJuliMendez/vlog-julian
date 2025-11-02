@@ -7,8 +7,13 @@
             to="/"
             class="flex items-center gap-2 font-bold text-xl"
           >
+            <UAvatar
+              src="/images/profile.jpg"
+              size="sm"
+              class="w-10 h-10 ring-2 ring-primary-200 dark:ring-primary-800 group-hover:ring-primary-400 transition-all"
+            />
             <span class="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              The blog
+              Julian
             </span>
 
           </NuxtLink>

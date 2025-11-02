@@ -47,26 +47,6 @@
       </NuxtLink>
     </div>
 
-    <div class="mb-8 flex flex-wrap gap-2">
-      <UButton
-        :color="selectedCategory === 'all' ? 'primary' : 'neutral'"
-        variant="solid"
-        @click="selectedCategory = 'all'"
-      >
-        All
-      </UButton>
-
-      <UButton
-        v-for="category in categories"
-        :key="category"
-        :color="selectedCategory === category ? 'primary' : 'neutral'"
-        variant="solid"
-        @click="selectedCategory = category"
-      >
-        {{ category }}
-      </UButton>
-    </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <NuxtLink
         v-for="post in filteredPosts"
@@ -159,74 +139,24 @@
 </template>
 
 <script setup lang="ts">
-interface Post {
-  slug: string
-  title: string
-  excerpt: string
-  date: string
-  category: string
-  tags: string[]
-}
+import { CategoryGradient, type Category } from '~/api/post/index.const'
+import type { Post } from '~/api/post/index.interface'
+import { useFormat } from '~/compasables/useFormat'
 
 const posts: Post[] = [
   {
-    slug: 'getting-started-with-nuxt-4',
-    title: 'Getting Started with Nuxt 4',
-    excerpt: 'Discover the amazing new features in Nuxt 4 and how to build modern web applications with this powerful framework.',
-    date: '2024-01-15',
-    category: 'Programming',
-    tags: ['Nuxt', 'Vue', 'JavaScript', 'Web Development'],
-  },
-  {
-    slug: 'traveling-to-japan',
-    title: 'Traveling to Japan: First Impressions',
-    excerpt: 'My journey through Tokyo, experiencing the culture, food, and technology that makes Japan unique.',
-    date: '2024-01-10',
-    category: 'Travel',
-    tags: ['Japan', 'Travel', 'Culture'],
-  },
-  {
-    slug: 'ai-developer-tools',
-    title: 'AI-Powered Developer Tools Revolution',
-    excerpt: 'Exploring how AI is transforming the way we write code and build software in 2024.',
-    date: '2024-01-08',
-    category: 'Tech',
-    tags: ['AI', 'Development', 'Productivity'],
-  },
-  {
-    slug: 'bali-dream-vacation',
-    title: 'Bali: A Dream Vacation Destination',
-    excerpt: 'From beautiful beaches to amazing food, here\'s why Bali should be on your travel bucket list.',
-    date: '2024-01-05',
-    category: 'Travel',
-    tags: ['Bali', 'Travel', 'Adventure'],
-  },
-  {
-    slug: 'vue-composition-api',
-    title: 'Mastering Vue Composition API',
-    excerpt: 'A deep dive into Vue 3\'s Composition API and how it makes building complex applications easier.',
-    date: '2024-01-03',
-    category: 'Programming',
-    tags: ['Vue', 'JavaScript', 'Frontend'],
-  },
-  {
-    slug: 'new-macbook-review',
-    title: 'MacBook Pro M3 Review: Is It Worth It?',
-    excerpt: 'After using the new MacBook Pro with M3 chip for a month, here are my honest thoughts.',
-    date: '2024-01-01',
-    category: 'Tech',
-    tags: ['Apple', 'Hardware', 'Review'],
+    slug: 'why-this-vlog',
+    title: 'Why this vlog?',
+    excerpt: 'My own divagation on why I did this :)',
+    date: '2025-11-02',
+    category: 'Thoughts',
+    tags: ['Thoughts', 'Opinions', 'Ideas'],
   },
 ]
 
 const selectedCategory = ref('all')
 
 const featuredPost = computed(() => posts[0] || null)
-
-const categories = computed(() => {
-  const cats = new Set(posts.map(post => post.category))
-  return Array.from(cats).sort()
-})
 
 const filteredPosts = computed(() => {
   if (selectedCategory.value === 'all') {
@@ -235,20 +165,9 @@ const filteredPosts = computed(() => {
   return posts.slice(1).filter(post => post.category === selectedCategory.value)
 })
 
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
+const { formatDate } = useFormat()
 
-function getPostGradient(category: string): string {
-  const gradients: Record<string, string> = {
-    Travel: 'from-blue-400 to-cyan-500',
-    Programming: 'from-purple-400 to-pink-500',
-    Tech: 'from-pink-400 to-orange-500',
-  }
-  return gradients[category] || 'from-gray-400 to-gray-500'
+function getPostGradient(category: Category): string {
+  return CategoryGradient[category]
 }
 </script>

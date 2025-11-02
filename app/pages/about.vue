@@ -11,7 +11,10 @@
         Hi, I'm Julian
       </h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Welcome to my personal here I will share my thoughts, experiences, and ideas as they come.
+        Welcome to my personal here I will share my thoughts, experiences, and ideas as they come. Spanish or English. Maybe both :)
+      </p>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Needles to say ideas and opinions are my own.
       </p>
     </div>
 
@@ -36,7 +39,7 @@
             <strong>Programming:</strong> Tutorials, code reviews, and insights into modern web development.
           </li>
           <li>
-            <strong>Tech Reviews:</strong> Thoughts on the latest gadgets, software, and tech trends.
+            <strong>Entertainment:</strong> My thought on the music I listen, movies & cool videos I watch, books I read, videogames I play, etc.
           </li>
         </ul>
       </div>
