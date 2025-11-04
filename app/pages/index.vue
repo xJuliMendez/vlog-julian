@@ -23,7 +23,7 @@
 
             </div>
 
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <h1 class="text-4xl hover:underline md:text-5xl font-bold mb-4">
               {{ featuredPost.title }}
             </h1>
 
@@ -132,7 +132,7 @@
         class="w-16 h-16 mx-auto mb-4 text-gray-400"
       />
       <p class="text-gray-600 dark:text-gray-400">
-        No posts found in this category.
+        No hay posts en esta categoría.
       </p>
     </div>
   </div>
@@ -145,12 +145,12 @@ import { useFormat } from '~/compasables/useFormat'
 
 const posts: Post[] = [
   {
-    slug: 'why-this-vlog',
-    title: 'Why this vlog?',
-    excerpt: 'My own divagation on why I did this :)',
+    slug: 'por-que-este-vlog',
+    title: '¿Por qué este vlog?',
+    excerpt: 'Divagaciones sobre por qué cree este vlog :)',
     date: '2025-11-02',
-    category: 'Thoughts',
-    tags: ['Thoughts', 'Opinions', 'Ideas'],
+    category: 'Pensamientos',
+    tags: ['Pensamientos', 'Opiniones', 'Ideas'],
   },
 ]
 

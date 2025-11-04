@@ -23,14 +23,14 @@
               to="/"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
             >
-              Home
+              Inicio
             </NuxtLink>
 
             <NuxtLink
-              to="/about"
+              to="/sobre-mi"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
             >
-              About
+              Sobre mí
             </NuxtLink>
           </nav>
 
@@ -71,21 +71,21 @@
           class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
-          Home
+          Inicio
         </NuxtLink>
         <NuxtLink
           to="/categories"
           class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
-          Categories
+          Categorías
         </NuxtLink>
         <NuxtLink
-          to="/about"
+          to="/sobre-mi"
           class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
-          About
+          Sobre mí
         </NuxtLink>
         <div class="flex items-center gap-2 pt-2 border-t border-gray-200 dark:border-gray-800">
           <UButton
@@ -110,7 +110,7 @@
     <UFooter class="mt-16 border-t border-gray-200 dark:border-gray-800">
       <template #left>
         <p class="text-sm text-gray-600 dark:text-gray-400">
-          © {{ new Date().getFullYear() }} Julian's Vlog. All rights reserved.
+          © {{ new Date().getFullYear() }} Julián's Vlog. Todos los derechos reservados.
         </p>
       </template>
       <template #right>
@@ -133,28 +133,9 @@
 </template>
 
 <script setup lang="ts">
+import { SocialMediaDefinition } from '~/api/socialMedia/index.const'
+
 const mobileMenuOpen = ref(false)
 
-const socialLinks = [
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/_JuliMendez',
-    icon: 'i-simple-icons-x',
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com/xJuliMendez',
-    icon: 'i-simple-icons-github',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com',
-    icon: 'i-simple-icons-linkedin',
-  },
-  {
-    name: 'Instagram',
-    url: 'https://instagram.com',
-    icon: 'i-simple-icons-instagram',
-  },
-]
+const socialLinks = Object.values(SocialMediaDefinition)
 </script>

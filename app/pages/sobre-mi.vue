@@ -8,38 +8,39 @@
         />
       </div>
       <h1 class="text-5xl font-bold mb-4 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-        Hi, I'm Julian
+        Hola, soy Julián
       </h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Welcome to my personal here I will share my thoughts, experiences, and ideas as they come. Spanish or English. Maybe both :)
+        Bienvenido a mi vlog personal. Aquí compartiré mis pensamientos, experiencias e ideas a medida que vayan surgiendo. En español o inglés. Quizás ambos :)
       </p>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Needles to say ideas and opinions are my own.
+        Ni que decir tiene que las ideas y opiniones son propias.
       </p>
     </div>
 
     <UCard class="mb-8">
       <template #header>
         <h2 class="text-2xl font-bold">
-          About Me
+          Sobre mí
         </h2>
       </template>
       <div class="prose prose-lg dark:prose-invert max-w-none">
         <p>
-          I'm a passionate developer who loves learning in general. So this will be a place to share my thoughts, experiences, and ideas as they come.
+          Soy un desarrollador apasionado por el aprendizaje en general. Por lo tanto, este será un lugar para compartir mis pensamientos, experiencias e ideas a medida que vayan surgiendo.
         </p>
+        <br>
         <p>
-          Here you'll find:
+          Aquí encontrarás:
         </p>
         <ul>
           <li>
-            <strong>Thoughts:</strong> My thoughts, experiences, and ideas as they come.
+            <strong>Pensamientos:</strong> Mis pensamientos, experiencias e ideas a medida que vayan surgiendo.
           </li>
           <li>
-            <strong>Programming:</strong> Tutorials, code reviews, and insights into modern web development.
+            <strong>Programación:</strong> Tutoriales, revisiones de código e insights sobre el desarrollo web moderno.
           </li>
           <li>
-            <strong>Entertainment:</strong> My thought on the music I listen, movies & cool videos I watch, books I read, videogames I play, etc.
+            <strong>Entretenimiento:</strong> Mis pensamientos sobre la música que escucho, películas y videos interesantes que veo, libros que leo, videojuegos que juego, etc.
           </li>
         </ul>
       </div>
@@ -49,14 +50,14 @@
       <UCard>
         <div class="text-center">
           <UIcon
-            name="i-heroicons-map-pin"
+            name="i-heroicons-light-bulb"
             class="w-12 h-12 mx-auto mb-4 text-blue-500"
           />
           <h3 class="text-xl font-bold mb-2">
-            Travel
+            Pensamientos
           </h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Exploring the world, one destination at a time
+            Mis pensamientos, experiencias e ideas a medida que vayan surgiendo
           </p>
         </div>
       </UCard>
@@ -68,10 +69,10 @@
             class="w-12 h-12 mx-auto mb-4 text-purple-500"
           />
           <h3 class="text-xl font-bold mb-2">
-            Programming
+            Programación
           </h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Building modern web applications and sharing knowledge
+            Construyendo aplicaciones web modernas y compartiendo conocimiento
           </p>
         </div>
       </UCard>
@@ -79,14 +80,14 @@
       <UCard>
         <div class="text-center">
           <UIcon
-            name="i-heroicons-device-phone-mobile"
+            name="i-heroicons-film"
             class="w-12 h-12 mx-auto mb-4 text-pink-500"
           />
           <h3 class="text-xl font-bold mb-2">
-            Tech
+            Entretenimiento
           </h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Reviews and thoughts on technology trends
+            Música, películas, videos interesantes, libros y videojuegos que alteren mi química cerebral
           </p>
         </div>
       </UCard>
@@ -95,7 +96,7 @@
     <UCard>
       <template #header>
         <h2 class="text-2xl font-bold">
-          Connect With Me
+          Conecta conmigo
         </h2>
       </template>
       <div class="flex flex-wrap gap-4 justify-center">
@@ -117,28 +118,9 @@
 </template>
 
 <script setup lang="ts">
-const socialLinks = [
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com',
-    icon: 'i-simple-icons-x',
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com',
-    icon: 'i-simple-icons-github',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com',
-    icon: 'i-simple-icons-linkedin',
-  },
-  {
-    name: 'Instagram',
-    url: 'https://instagram.com',
-    icon: 'i-simple-icons-instagram',
-  },
-]
+import { SocialMediaDefinition } from '~/api/socialMedia/index.const'
+
+const socialLinks = Object.values(SocialMediaDefinition)
 
 definePageMeta({
   title: 'About',
