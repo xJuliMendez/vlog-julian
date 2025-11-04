@@ -2,13 +2,20 @@
   <div>
     <div
       v-if="featuredPost"
-      class="mb-12 rounded-2xl overflow-hidden shadow-xl bg-linear-to-br from-blue-500 via-purple-500 to-pink-500"
+      class="mb-12 rounded-2xl overflow-hidden shadow-xl"
+      :class="featuredPost.heroImage ? '' : 'bg-linear-to-br from-blue-500 via-purple-500 to-pink-500'"
     >
       <NuxtLink
         :to="`/posts/${featuredPost.slug}`"
         class="block"
       >
         <div class="relative h-[400px] md:h-[500px] flex items-end">
+          <img
+            v-if="featuredPost.heroImage"
+            :src="featuredPost.heroImage"
+            :alt="featuredPost.title"
+            class="absolute inset-0 w-full h-full object-cover object-top blur-sx"
+          >
           <div class="absolute inset-0 bg-black/30" />
           <div class="relative z-10 p-8 md:p-12 text-white w-full">
             <div class="flex gap-2 mb-4">
@@ -151,6 +158,7 @@ const posts: Post[] = [
     date: '2025-11-02',
     category: 'Pensamientos',
     tags: ['Pensamientos', 'Opiniones', 'Ideas'],
+    heroImage: '/images/why-this-vlog-hero.png',
   },
 ]
 

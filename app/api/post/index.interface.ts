@@ -7,4 +7,5 @@ export interface Post {
   date: string
   category: Category
   tags: Category[]
+  heroImage?: string
 }
