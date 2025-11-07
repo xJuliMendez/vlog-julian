@@ -13,7 +13,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-
+        with:
+          cache: "pnpm"
       # - uses: actions/setup-node@v4
       #   with:
       #     node-version: '20'
@@ -27,13 +28,5 @@ jobs:
       - name: TSC
         run: pnpm tsc || exit 1
 
-  build:
-    needs: static-analysis
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: pnpm install
-        run: pnpm install
-
-      - name: pnpm build
+      - name: Build
         run: pnpm build
