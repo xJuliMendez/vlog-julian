@@ -25,5 +25,8 @@
     "typescript",
     "typescriptreact",
     "vue"
-  ]
+  ],
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
