@@ -9,16 +9,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: pnpm install
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+
+      - name: Install dependencies
         run: pnpm install
 
-      - name: pnpm lint
+      - name: Lint
         run: pnpm lint:dry || exit 1
 
-      - name: pnpm tsc
+      - name: TSC
         run: pnpm tsc || exit 1
 
   build:
+    needs: static-analysis
     runs-on: ubuntu-latest
 
     steps:
