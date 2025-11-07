@@ -1,0 +1,29 @@
+name: Pipelines
+
+on:
+  push:
+    branches: ["main", "feature/**"]
+
+jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: pnpm install
+        run: pnpm install
+
+      - name: pnpm lint
+        run: pnpm lint:dry || exit 1
+
+      - name: pnpm tsc
+        run: pnpm tsc || exit 1
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: pnpm install
+        run: pnpm install
+
+      - name: pnpm build
+        run: pnpm build
