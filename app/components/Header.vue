@@ -9,4 +9,3 @@ defineProps<{
     <slot />
   </h1>
 </template>
-
