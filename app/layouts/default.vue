@@ -13,7 +13,7 @@
               class="w-10 h-10 ring-2 ring-primary-200 dark:ring-primary-800 group-hover:ring-primary-400 transition-all"
             />
             <span class="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Julian
+              Julian - Vlog
             </span>
 
           </NuxtLink>
@@ -21,14 +21,16 @@
           <nav class="hidden md:flex items-center gap-6">
             <NuxtLink
               to="/"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+              class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
             >
               Inicio
             </NuxtLink>
 
+            <NavigationContentDropdown />
+
             <NuxtLink
               to="/sobre-mi"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+              class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
             >
               Sobre mí
             </NuxtLink>
@@ -68,21 +70,21 @@
       <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
         <NuxtLink
           to="/"
-          class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
           Inicio
         </NuxtLink>
         <NuxtLink
           to="/categories"
-          class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
           Categorías
         </NuxtLink>
         <NuxtLink
           to="/sobre-mi"
-          class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
+          class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
           Sobre mí
