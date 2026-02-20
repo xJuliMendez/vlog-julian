@@ -24,8 +24,8 @@ const posts: Post[] = [
     title: '¿Por qué este vlog?',
     excerpt: 'Divagaciones sobre por qué cree este vlog :)',
     date: '2025-11-02',
-    category: 'Pensamientos',
-    tags: ['Pensamientos', 'Opiniones', 'Ideas'],
+    category: 'Reflexiones',
+    tags: ['Reflexiones', 'Opiniones', 'Ideas'],
     heroImage: '/images/why-this-vlog-hero.png',
   },
   {
@@ -33,8 +33,8 @@ const posts: Post[] = [
     title: '¿Por qué este vlog?',
     excerpt: 'Divagaciones sobre por qué cree este vlog :)',
     date: '2025-11-02',
-    category: 'Pensamientos',
-    tags: ['Pensamientos', 'Opiniones', 'Ideas'],
+    category: 'Reflexiones',
+    tags: ['Reflexiones', 'Opiniones', 'Ideas'],
     heroImage: '/images/why-this-vlog-hero.png',
   },
 ]

@@ -76,11 +76,11 @@
           Inicio
         </NuxtLink>
         <NuxtLink
-          to="/categories"
+          to="/posts/por-que-este-vlog"
           class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
           @click="mobileMenuOpen = false"
         >
-          Categorías
+          Publicaciones
         </NuxtLink>
         <NuxtLink
           to="/sobre-mi"

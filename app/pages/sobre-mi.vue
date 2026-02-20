@@ -11,7 +11,7 @@
         Hola, soy Julián
       </h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Bienvenido a mi vlog personal. Aquí compartiré mis pensamientos, experiencias e ideas a medida que vayan surgiendo. En español o inglés. Quizás ambos :)
+        Bienvenido a mi vlog personal. Aquí compartiré mis reflexiones, experiencias e ideas a medida que vayan surgiendo. En español o inglés. Quizás ambos :)
       </p>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
         Ni que decir tiene que las ideas y opiniones son propias.
@@ -26,7 +26,7 @@
       </template>
       <div class="prose prose-lg dark:prose-invert max-w-none">
         <p>
-          Soy un desarrollador apasionado por el aprendizaje en general. Por lo tanto, este será un lugar para compartir mis pensamientos, experiencias e ideas a medida que vayan surgiendo.
+          Soy un desarrollador apasionado por el aprendizaje en general. Por lo tanto, este será un lugar para compartir mis reflexiones, experiencias e ideas a medida que vayan surgiendo.
         </p>
         <br>
         <p>
@@ -34,13 +34,13 @@
         </p>
         <ul>
           <li>
-            <strong>Pensamientos:</strong> Mis pensamientos, experiencias e ideas a medida que vayan surgiendo.
+            <strong>Reflexiones:</strong> Mis reflexiones, experiencias e ideas a medida que vayan surgiendo.
           </li>
           <li>
             <strong>Programación:</strong> Tutoriales, revisiones de código e insights sobre el desarrollo web moderno.
           </li>
           <li>
-            <strong>Entretenimiento:</strong> Mis pensamientos sobre la música que escucho, películas y videos interesantes que veo, libros que leo, videojuegos que juego, etc.
+            <strong>Entretenimiento:</strong> Mis reflexiones sobre la música que escucho, películas y videos interesantes que veo, libros que leo, videojuegos que juego, etc.
           </li>
         </ul>
       </div>
@@ -54,10 +54,10 @@
             class="w-12 h-12 mx-auto mb-4 text-blue-500"
           />
           <h3 class="text-xl font-bold mb-2">
-            Pensamientos
+            Reflexiones
           </h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Mis pensamientos, experiencias e ideas a medida que vayan surgiendo
+            Mis reflexiones, experiencias e ideas a medida que vayan surgiendo
           </p>
         </div>
       </UCard>
